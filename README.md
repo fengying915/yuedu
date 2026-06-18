@@ -1,5 +1,5 @@
 <div align="center">
-<img width="125" height="125" src="订阅/枫影/主页/favicon.svg" alt="枫影"/>
+<img width="125" height="125" src="https://gitee.com/fengying915/yuedu/raw/main/favicon.svg" alt="枫影"/>
 <br>枫影的阅读仓库
 <br>针对<a href="https://github.com/gedoor/legado" target="_blank">阅读3.0</a>制作的聚合订阅源
 </div>
