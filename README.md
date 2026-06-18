@@ -8,7 +8,7 @@
 
 | 订阅源名称 | 一键导入 |
 |:--|:-:|
-| 枫影的订阅 | [一键导入](legado://import/importonline?src=https://gitee.com/fengying915/yuedu/raw/main/订阅/枫影/fengying.json) |
+| 枫影的订阅 | [一键导入](legado://import/importonline?src=https://gitee.com/fengying915/yuedu/raw/main/fy.json) |
 
 ## 资源列表
 
