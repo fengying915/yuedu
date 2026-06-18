@@ -1,5 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#2c3e50"/>
-  <text x="50" y="62" font-family="Arial" font-size="40" font-weight="bold" fill="#f39c12" text-anchor="middle">枫</text>
-  <text x="50" y="85" font-family="Arial" font-size="14" fill="#ecf0f1" text-anchor="middle">订阅</text>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- FY：完全静态 -->
+  <g fill="#222">
+
+    <path d="M70 60 H140 V82 H98 V110 H132 V132 H98 V196 H70 Z"/>
+
+    <path d="M150 60 L176 108 L202 60 H222 L188 124 V196 H166 V126 L128 60 Z"/>
+
+  </g>
+
+  <!-- 枫叶：只做“光感变化”，不动形 -->
+  <path d="M128 92
+           L140 114
+           L162 120
+           L146 136
+           L150 158
+           L128 146
+           L106 158
+           L110 136
+           L94 120
+           L116 114 Z"
+        fill="#e24b2e">
+
+    <!-- 亮度呼吸（核心替代动画） -->
+    <animate attributeName="opacity"
+             values="0.85;1;0.85"
+             dur="3s"
+             repeatCount="indefinite"/>
+
+    <!-- 轻微“发光感”变化（模拟风流过） -->
+    <animate attributeName="fill-opacity"
+             values="0.9;1;0.9"
+             dur="3s"
+             repeatCount="indefinite"/>
+
+  </path>
+
 </svg>
