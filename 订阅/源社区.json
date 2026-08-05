@@ -1,0 +1,23 @@
+[{
+  "articleStyle": 0,
+  "cacheFirst": false,
+  "customOrder": 0,
+  "enableJs": true,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "header": "{\n    'User-Agent': 'Mozilla/5.0 (Linux; Android 11; Pixel 3 XL Build/RQ3A.211001.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.4988.0 Mobile Safari/537.36 SearchCraft/3.9.2 (Baidu; P1 11) '\n}",
+  "jsLib": "banben=\"1.0.0\";",
+  "lastUpdateTime": 1785298217767,
+  "loadWithBaseUrl": true,
+  "loginUi": "@js:\n`[\n    {\n        name: \"订阅源版本 \",\n        viewName: \"'订阅源版本 V'+banben\",\n        type: \"button\",\n        action: \"gengxin()\",\n        style: {\n            \"layout_flexGrow\": 1,\n            \"layout_flexBasisPercent\": 0.4,\n            \"layout_wrapBefore\": true\n        }\n    }\n]`",
+  "loginUrl": "@js:\nfunction login() {}\n\nfunction gengxin() {\n    java.toast('正在检查...');\n    var r = java.get('https://cdn.jsdelivr.net/gh/fengying915/yuedu@main/订阅/源社区.json', {\n        'User-Agent': 'Mozilla/5.0'\n    }).body();\n    var d = JSON.parse(r)[0];\n    var rb = d.jsLib.match(/banben=\"([^\"]+)\"/)[1];\n    var gxts;\n    if (rb != banben) {\n        gxts = ['有更新', '0,140,186'];\n    } else {\n        gxts = ['已是最新', '76,175,80'];\n    }\n    var h = '<html>'\n        + '<body style=\"font-size:24px;text-align:center;padding:20px;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;\">'\n        + '<div style=\"background:white;border-radius:20px;padding:40px;max-width:400px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);\">'\n        + '<div style=\"font-size:72px;\">📦</div>'\n        + '<h2 style=\"font-size:30px;margin:20px 0;\">版本检测</h2>'\n        + '<div style=\"display:inline-block;padding:10px 24px;border-radius:20px;color:white;font-size:22px;background:rgb(' + gxts[1] + ')\">' + gxts[0] + '</div>'\n        + '<p style=\"margin:18px 0;\">本地: V' + banben + '</p>'\n        + '<p style=\"margin:18px 0;\">仓库: V' + rb + '</p>'\n        + '<a href=\"legado://import/importonline?src=https://cdn.jsdelivr.net/gh/fengying915/yuedu@main/订阅/源社区.json\" style=\"display:block;padding:20px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;text-decoration:none;border-radius:12px;margin-top:24px;font-size:24px;font-weight:bold;\">更新订阅源</a>'\n        + '</div>'\n        + '</body>'\n        + '</html>';\n    java.startBrowser('data:text/html;base64,' + java.base64Encode(h), '版本检测');\n}",
+  "preload": false,
+  "showWebLog": false,
+  "singleUrl": true,
+  "sourceComment": "v1.0.0 - 2026.7.29\n\n源社区交流群\r\nTG https://t.me/yuanluntan\nTG频道 https://t.me/yuansheqv\n\n论坛主域名后续一直是 ycoo.net\r\npc.sysbbs.com以及m.sysbbs.com转为备用域名\r\n尽量使用 ycoo.net 该域名可在微信QQ内无障碍访问",
+  "sourceGroup": "📖 阅读,💬 论坛",
+  "sourceIcon": "https://ycoo.net/data/avatar/000/00/02/41_avatar_big.jpg",
+  "sourceName": "源社区",
+  "sourceUrl": "https://ycoo.net",
+  "type": 0
+}]

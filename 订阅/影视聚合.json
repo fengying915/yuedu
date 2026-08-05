@@ -1,0 +1,19 @@
+[{
+  "articleStyle": 0,
+  "cacheFirst": false,
+  "customOrder": 0,
+  "enableJs": true,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "lastUpdateTime": 1785903805105,
+  "loadWithBaseUrl": true,
+  "preload": false,
+  "showWebLog": false,
+  "singleUrl": true,
+  "sourceComment": "v1.0.0 - 2026.8.5\n\n原作者：Dubai（源社区）\n内置53个数据源，详情页增加其他数据源的搜索结果，网站适配电脑端的卡片显示，在原来的基础上优化分类、搜索、返回等",
+  "sourceGroup": "🎬 影视",
+  "sourceIcon": "https://gitee.com/fengying915/pic/raw/main/zycj.gif",
+  "sourceName": "影视聚合",
+  "sourceUrl": "https://fengying915.github.io/zycj.html",
+  "type": 0
+}]
