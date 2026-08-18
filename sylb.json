@@ -1,0 +1,20 @@
+[
+  {
+    "name": "🎈 神凑轻小说",
+    "host": "https://m.shencou.com",
+    "time": "v1.0.0 - 2026.8.18",
+    "url": "书源/🎈 神凑轻小说.json"
+  },
+  {
+    "name": "🎈 轻小说文库",
+    "host": "https://www.wenku8.net",
+    "time": "v1.1.0 - 2026.8.18",
+    "url": "书源/🎈 轻小说文库.json"
+  },
+  {
+    "name": "🙈 八叉书库",
+    "host": "https://bcshuku.com",
+    "time": "v1.1.1 - 2026.8.18",
+    "url": "书源/🙈 八叉书库.json"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "枫影的订阅",
+    "host": "https://github.com/fengying915/yuedu",
+    "time": "v1.1.0 - 2026.8.18",
+    "url": "fy.json"
+  },
+  {
+    "name": "夜社视频",
+    "host": "https://yeshex.com",
+    "time": "v1.1.0 - 2026.8.18",
+    "url": "订阅/夜社视频.json"
+  },
+  {
+    "name": "源仓库",
+    "host": "https://yckceo.vip",
+    "time": "v1.1.0 - 2026.8.18",
+    "url": "订阅/源仓库.json"
+  },
+  {
+    "name": "源社区",
+    "host": "https://ycoo.net",
+    "time": "v1.1.0 - 2026.8.18",
+    "url": "订阅/源社区.json"
+  }
+]
