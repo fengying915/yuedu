@@ -1,0 +1,54 @@
+[{
+  "bookSourceComment": "v1.0.0 - 2026.8.18",
+  "bookSourceGroup": "📙 禁书,🔞 福利",
+  "bookSourceName": "📙 疯情书库✈️",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://aabook.xyz",
+  "customButton": false,
+  "customOrder": 0,
+  "enabled": true,
+  "enabledCookieJar": true,
+  "enabledExplore": true,
+  "eventListener": false,
+  "exploreUrl": "@js:\nvar result=[];\nvar obMap={\"综合\":\"-1\",\"点击\":\"click\",\"更新\":\"update\",\"字数\":\"wordcount\",\"发布\":\"public\"};\nvar finMap={\"全部\":\"-1\",\"连载中\":\"0\",\"已完结\":\"1\"};\nvar updMap={\"全部\":\"-1\",\"三日内\":\"3\",\"七日内\":\"7\",\"半月内\":\"15\",\"一月内\":\"30\",\"三月内\":\"90\"};\nvar sizeMap={\"全部\":\"-1\",\"30万以下\":\"30\",\"30~50万\":\"50\",\"50~100万\":\"100\",\"100~200万\":\"200\",\"200万以上\":\"999\"};\nresult.push({title:\"排序方式\",type:\"select\",chars:Object.keys(obMap),default:infoMap[\"排序方式\"]||\"综合\",action:\"java.refreshExplore()\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.45}});\nresult.push({title:\"写作进度\",type:\"select\",chars:Object.keys(finMap),default:infoMap[\"写作进度\"]||\"全部\",action:\"java.refreshExplore()\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.45}});\nresult.push({title:\"作品字数\",type:\"select\",chars:Object.keys(sizeMap),default:infoMap[\"作品字数\"]||\"全部\",action:\"java.refreshExplore()\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.45,layout_wrapBefore:true}});\nresult.push({title:\"更新时间\",type:\"select\",chars:Object.keys(updMap),default:infoMap[\"更新时间\"]||\"全部\",action:\"java.refreshExplore()\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.45}});\nvar ob=obMap[infoMap[\"排序方式\"]||\"综合\"];\nvar fin=finMap[infoMap[\"写作进度\"]||\"全部\"];\nvar sz=sizeMap[infoMap[\"作品字数\"]||\"全部\"];\nvar upd=updMap[infoMap[\"更新时间\"]||\"全部\"];\nfunction mk(catId){return \"https://www.aabook.xyz/category.html?pageNum={{page}}&pageSize=30&catId=\"+catId+\"&size=\"+sz+\"&isFinish=\"+fin+\"&updT=\"+upd+\"&orderBy=\"+ob;}\nvar cats=[[\"全部\",\"-1\"],[\"穿越\",\"chuanyue\"],[\"异能\",\"yineng\"],[\"言情\",\"yanqing\"],[\"玄幻\",\"xuanhuan\"],[\"校园\",\"xiaoyuan\"],[\"仙侠\",\"xianxia\"],[\"武侠\",\"wuxia\"],[\"都市\",\"dushi\"],[\"历史\",\"lishi\"],[\"古典\",\"gudian\"],[\"惊悚\",\"jingsong\"],[\"耽美\",\"danmei\"],[\"同人\",\"tongren\"],[\"女尊\",\"nvzun\"],[\"网游\",\"wangyou\"],[\"乡土\",\"xiangtu\"],[\"官场\",\"guanchang\"],[\"职场\",\"zhichang\"],[\"单篇\",\"danpian\"]];\ncats.forEach(function(c){result.push({title:c[0],url:mk(c[1]),style:{layout_flexGrow:1,layout_flexBasisPercent:0.2}});});\nresult.push({title:\"📊 榜单\",url:\"\",style:{layout_flexGrow:1,layout_flexBasisPercent:1}});\nresult.push({title:\"🔥 点击榜\",url:\"https://www.aabook.xyz/ranking.php?t=click\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.25}});\nresult.push({title:\"📚 新书榜\",url:\"https://www.aabook.xyz/ranking.php?t=newbook\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.25}});\nresult.push({title:\"📝 字数榜\",url:\"https://www.aabook.xyz/ranking.php?t=totalword\",style:{layout_flexGrow:1,layout_flexBasisPercent:0.25}});\nresult.push({title:\"🔄 最近更新\",url:\"https://www.aabook.xyz/category.html?pageNum={{page}}&pageSize=30&catId=-1&size=-1&isFinish=-1&updT=-1&orderBy=update\",style:{layout_flexGrow:1,layout_flexBasisPercent:1}});\ninfoMap.save();\nJSON.stringify(result);",
+  "lastUpdateTime": 1787061820915,
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "@get:{a}",
+    "coverUrl": "@get:{c}",
+    "init": "@put:{\nn:\".book_name@text\",\na:\".author@text\",\nk:\".xinxi_content span.0:1@text&&.update_time@text\",\nw:\".xinxi_content span.2@text\",\nl:\".dt_l a.0@text\",\ni:\".jianjieneirong@html\",\nc:\".book_info_top_l img@src\",\nu:\".xiaoshuomulu a@href\"\n}",
+    "intro": "<br>@get:{i}##\\s\\s##<br>",
+    "kind": "@get:{k}##创建时间\\s|...:.*|中|已",
+    "lastChapter": "@get:{l}",
+    "name": "@get:{n}",
+    "tocUrl": "@get:{u}",
+    "wordCount": "@get:{w}##字"
+  },
+  "ruleContent": {
+    "content": ".chapter_con p@text##[feng|疯].*?库|book.*?net",
+    "replaceRegex": "##，\\s\\s\\s##，"
+  },
+  "ruleExplore": {
+    "author": ".author@text",
+    "bookList": "tbody tr",
+    "bookUrl": "a.0@href",
+    "kind": ".fenlei@text",
+    "name": ".shuming@text"
+  },
+  "ruleSearch": {
+    "author": ".zuozhe@text",
+    "bookList": ".sousuojieguo ul li",
+    "bookUrl": "a.0@href",
+    "coverUrl": "a.0@href##(\\d+)##https://aabook.xyz/img-$1.jpg###",
+    "kind": "textNodes&&cite@text##\\[|\\]|小说",
+    "name": ".biaoti@text"
+  },
+  "ruleToc": {
+    "chapterList": "ul.section_list li a",
+    "chapterName": "text",
+    "chapterUrl": "href",
+    "updateTime": "title"
+  },
+  "searchUrl": "https://aabook.xyz/search.php?searchword={{key}}",
+  "weight": 0
+}]

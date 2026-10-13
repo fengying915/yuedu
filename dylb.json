@@ -1,0 +1,20 @@
+[
+  {
+    "name": "枫影的订阅",
+    "host": "https://github.com/fengying915/yuedu",
+    "time": "v1.2.0 - 2026.10.13",
+    "url": "fy.json"
+  },
+  {
+    "name": "源仓库",
+    "host": "https://yckceo.vip",
+    "time": "v1.1.1 - 2026.10.13",
+    "url": "订阅/源仓库.json"
+  },
+  {
+    "name": "源社区",
+    "host": "https://ycoo.net",
+    "time": "v1.1.1 - 2026.10.13",
+    "url": "订阅/源社区.json"
+  }
+]
